@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+source /etc/service/kibana/default
+
+sleep 5
+
+exec /sbin/setuser kibana /usr/share/kibana/bin/kibana

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+
+source /etc/service/elasticsearch/default
+
+exec /sbin/setuser elasticsearch /usr/share/elasticsearch/bin/elasticsearch -Edefault.path.logs=$LOG_DIR -Edefault.path.data=$DATA_DIR -Edefault.path.conf=$CONF_DIR
